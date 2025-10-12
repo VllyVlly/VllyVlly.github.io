@@ -1,0 +1,146 @@
+body {
+    background: #897676;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+}
+
+
+.main {
+    height: 500px;
+    width: 700px;
+    border: 6px solid #897676;
+    border-color: #ffffff;
+    border-radius: 15px;
+    padding: 5px;
+    background: linear-gradient(135deg, #0e0c3a 0%, #332ab7 100%);
+    display: flex;
+    margin: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.2s forwards;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;  
+    align-items: center; 
+    margin: 25px;
+    width: 30%;
+    transform: translateX(-1000px);
+    animation: slideInLeft 0.8s ease-out 0.5s forwards;
+}
+
+.right {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 25px;
+    transform: translateX(1000px);
+    animation: slideInRight 0.8s ease-out 0.7s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.profile-pic {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: block;
+    margin: 25px;
+    overflow: hidden;
+}
+
+.about, .links {
+    font-family: 'Inter', system-ui, sans-serif;
+    margin-bottom: 15px;
+}
+
+.about h1, .links h1 {
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 15px;
+    font-palette: #313939;
+    color: #ffffff;
+}
+
+.about h2 {
+    font-weight: normal; 
+    font-size: 20px; 
+    text-align: justify;
+    color: #ffffff;
+}
+
+.button {
+    height: 30px;
+    width: auto;
+    padding-inline: 15px;
+    text-align: center;
+    border: 2px solid #897676;
+    border-color: #897676;
+    border-radius: 6px;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: normal;
+    font-size: 12pt;
+    margin: 3px;
+    margin-bottom: 5px;
+    transition-duration: 0.4s;
+}
+
+.name {
+    font-size: large;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.lang:hover, .link-btn:hover {
+    background: #b9bfcd;
+}
+
+.lang:active, .link-btn:active {
+    animation: bounce 0.2s;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(0.9); }
+  50%  { transform: scale(1.1); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}

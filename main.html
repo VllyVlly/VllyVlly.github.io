@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Virelle Biography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>
+        window.addEventListener('beforeunload', function (e) {
+            console.log('Confirming exit...');
+            e.preventDefault();
+            e.returnValue = ''; 
+            return ''; 
+        });
+    </script>
+
+    <div class="main">
+        <div class="left">
+            <div class="profile-pic">
+                <img src="pfp.jpeg">
+            </div>
+            <h1 class="name" style="margin-bottom: 40px;">Virelle Lee Luo Yuan</h1>
+            <div>
+                <button class="button lang">HTML</button>
+                <button class="button lang">Javascript</button>
+                <button class="button lang">Java</button>
+                <button class="button lang">C++</button>
+                <button class="button lang">Python</button>
+                <button class="button lang">Lua</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="about">
+                <h1>About me</h1>
+                <h2>I'm a 2nd year undergraduate student studying in the Chinese University of Hong Kong, Shenzhen. I am currently majoring in Computer Science and Engineering. My dream career is to be a game developer.</h2>
+            </div>
+            
+             <div class="links">
+                <h1>Links</h1>
+                <button class="button link-btn" onclick="console.log('Sending Mail...');location.href='mailto:virelleleeluoyuan@link.cuhk.edu.cn';"><img src="email.png" style="width:15px;height:15px;"> Email</button>
+                <button class="button link-btn" onclick="console.log('Opening LinkedIn...');location.href='https://www.linkedin.com/in/virelle-lee-luo-yuan-901493346/';"><img src="linkedin.png" style="width:15px;height:15px;"> LinkedIn</button>
+                <button class="button link-btn" onclick="console.log('Opening Instagram...');location.href='https://www.instagram.com/virelle_lly?igsh=MWllNGNsbXp6MGZzZg==';"><img src="instagram.png" style="width:15px;height:15px;"> Instagram</button>
+                <button class="button link-btn" onclick="console.log('Opening Github...');location.href='https://github.com/VllyVlly';"><img src="github.png" style="width:15px;height:15px;"> Github</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
